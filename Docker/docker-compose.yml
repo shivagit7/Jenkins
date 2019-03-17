@@ -7,7 +7,7 @@ services:
         ports:
             - '80:8080'
             - '50000:50000'
-        image: jenkins
+        image: jenkins-master
         volumes:
             - /Users/shiva/workspace/jenkins/jenkins-data:/var/jenkins_home
             - /Users/shiva/workspace/jenkins/jenkins-log:/var/log/jenkins
