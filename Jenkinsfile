@@ -10,7 +10,7 @@ node('docker') {
         sh "docker images"
 
     stage 'Build Docker Images'
-    sh "docker build -t sample:B${BUILD_NUMBER} -f /Build/sample1/Dockerfile"
+    sh "docker build -t sample:B${BUILD_NUMBER} -f /Build/sample1/Dockerfile ."
 
     stage 'Docker_Images_After_Build'
         echo "Listing Docker Images After Build"
