@@ -1,0 +1,4 @@
+https download transport for APT
+This package enables the usage of 'deb https://foo distro main' lines in the /etc/apt/sources.list
+so that all package managers using the libapt-pkg library can access metadata and packages available in sources accessible over
+https (Hypertext Transfer Protocol Secure).
