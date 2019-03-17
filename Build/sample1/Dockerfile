@@ -1,4 +1,4 @@
 FROM ubuntu
 
 # update the ubuntu Image
-RUN apt-get update 
+RUN apt-get update
