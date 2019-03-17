@@ -7,6 +7,7 @@ node('docker') {
 
     stage 'Present Working Directory'
         sh "pwd"
+        sh "ls -la"
 
     stage 'Docker_Images_Before_Build'
         echo "Listing Docker Images Before Build"
