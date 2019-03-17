@@ -15,5 +15,5 @@ node('docker') {
     stage 'Docker_Images_After_Build'
         echo "Listing Docker Images After Build"
         sh "docker images"
-        
+
 }
