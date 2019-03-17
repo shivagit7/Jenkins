@@ -15,8 +15,6 @@ node('docker') {
 
     stage 'Build Docker Images'
 
-    sh "pwd"
-    sh "ls -la"
     dir('Build/sample1') {
     // some block
     sh "docker build -t sample:B${BUILD_NUMBER} ."
