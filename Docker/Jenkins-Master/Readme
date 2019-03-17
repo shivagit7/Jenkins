@@ -1,0 +1,3 @@
+build docker image for jenkins master
+
+docker build -t jenkins-master .
