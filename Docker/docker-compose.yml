@@ -1,7 +1,7 @@
 version: '3.1'
 services:
     jenkins:
-        container_name: jenkins
+        container_name: jenkins-master
         privileged: true
         restart: always
         ports:
@@ -15,7 +15,7 @@ services:
         container_name: jenkins-slave
         restart: always
         environment:
-            - 'JENKINS_URL=http://localhost:80'
+            - 'JENKINS_URL=http://jenkins:80'
         image: jenkins-slave
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock # Expose the docker daemon in the container
