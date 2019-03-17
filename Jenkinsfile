@@ -5,6 +5,9 @@ node('docker') {
     stage 'Checkout'
         checkout scm
 
+    stage 'Present Working Directory'
+        sh "pwd"
+
     stage 'Docker_Images_Before_Build'
         echo "Listing Docker Images Before Build"
         sh "docker images"
