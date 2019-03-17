@@ -17,7 +17,7 @@ node('docker') {
 
     sh "pwd"
     sh "ls -la"
-    sh "docker build -t sample:B${BUILD_NUMBER} ./Build/Sample1/Dockerfile ."
+    sh "docker build -t sample:B${BUILD_NUMBER} -f ./Build/Sample1/Dockerfile ."
 
     stage 'Docker_Images_After_Build'
         echo "Listing Docker Images After Build"
