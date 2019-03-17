@@ -7,7 +7,7 @@ services:
         ports:
             - '80:8080'
             - '50000:50000'
-        image: localhost:5000/jenkins
+        image: jenkins
         volumes:
             - /Users/shiva/workspace/jenkins/jenkins-data:/var/jenkins_home
             - /Users/shiva/workspace/jenkins/jenkins-log:/var/log/jenkins
@@ -15,8 +15,8 @@ services:
         container_name: jenkins-slave
         restart: always
         environment:
-            - 'JENKINS_URL=http://jenkins:80'
-        image: localhost:5000/jenkins-slave
+            - 'JENKINS_URL=http://localhost:80'
+        image: jenkins-slave
         volumes:
             - /var/run/docker.sock:/var/run/docker.sock # Expose the docker daemon in the container
             - /Users/shiva/workspace/jenkins/jenkins-slave:/home/jenkins # Avoid mysql volume mount issue
